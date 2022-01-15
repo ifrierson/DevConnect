@@ -17,6 +17,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Profiles from './components/Profiles/Profiles';
 import Profile from './components/profile/Profile';
+import Posts from './components/Posts/Posts';
 
 import './App.css';
 
@@ -61,6 +62,10 @@ const App = () => {
           <Route
             path="add-education"
             element={<PrivateRoute component={AddEducation} />}
+          />
+          <Route
+            path="posts"
+            element={<PrivateRoute component={Posts} />}
           />
         </Routes>
       </Fragment>
