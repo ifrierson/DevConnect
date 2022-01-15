@@ -18,6 +18,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import Profiles from './components/Profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/Posts/Posts';
+import Post from './components/Post/Post';
 
 import './App.css';
 
@@ -63,10 +64,8 @@ const App = () => {
             path="add-education"
             element={<PrivateRoute component={AddEducation} />}
           />
-          <Route
-            path="posts"
-            element={<PrivateRoute component={Posts} />}
-          />
+          <Route path="posts" element={<PrivateRoute component={Posts} />}/>
+          <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
         </Routes>
       </Fragment>
     </Router>
